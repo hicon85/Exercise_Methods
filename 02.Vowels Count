@@ -1,0 +1,50 @@
+using System;
+
+namespace _02.Vowels_Count
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string name = Console.ReadLine().ToLower();
+            int result = GoodJob(name);
+            Console.WriteLine(result);
+        }
+        private static int GoodJob(string name)
+        {
+            int count = 0;
+
+            for (int i = 0; i < name.Length; i++)
+            {
+                char current = name[i];
+
+                if(current == 'a')
+                {
+                    count++;
+                }
+                else if(current == 'e')
+                {
+                    count++;
+                }
+                else if(current == 'i')
+                {
+                    count++;
+                }
+                else if(current == 'o')
+                {
+                    count++;
+                }
+                else if(current == 'u')
+                {
+                    count++;
+                }
+                else if(current == 'y')
+                {
+                    count++;
+                }
+                
+            }
+            return count;
+        }
+    }
+}
