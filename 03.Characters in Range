@@ -1,0 +1,30 @@
+using System;
+
+namespace _03.Characters_in_Range
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            char first = char.Parse(Console.ReadLine());
+            char secunds = char.Parse(Console.ReadLine());
+
+            char start = first;
+            char end = secunds;
+
+            if(secunds <first )
+            {
+                start = secunds;
+                end = first;
+            }
+            GoodJob(start, end);
+        }
+        private static void GoodJob(char start, char end)
+        {
+            for (char i = (char)(start+1); i < end; i++)
+            {
+                Console.Write($"{i} ");
+            }
+        }
+    }
+}
