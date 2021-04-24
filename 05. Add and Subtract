@@ -1,0 +1,28 @@
+using System;
+
+namespace _05.Add_and_Subtract
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int firstNumber = int.Parse(Console.ReadLine());
+            int secundsNumber = int.Parse(Console.ReadLine());
+            int truNumber = int.Parse(Console.ReadLine());
+
+            int start = Sum(firstNumber, secundsNumber);
+            int duff = SumGet(start, truNumber);
+
+
+            Console.WriteLine(duff);
+        }
+        private static int Sum(int start, int duff)
+        {
+            return start + duff;
+        }
+        private static int SumGet(int start, int duff)
+        {
+            return start - duff;
+        }
+    }
+}
