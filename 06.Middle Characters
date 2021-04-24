@@ -1,0 +1,26 @@
+using System;
+
+namespace _06.Middle_Characters
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string goodJob = Console.ReadLine();
+
+            string name = TopJob(goodJob);
+
+            Console.WriteLine(name);
+        }
+
+        private static string TopJob(string goodJob)
+        {
+            if(goodJob.Length % 2 == 0)
+            {
+                return $"{goodJob[goodJob.Length / 2 - 1]}{goodJob[goodJob.Length / 2]}";
+            }
+
+            return $"{goodJob[(goodJob.Length - 1) / 2]}";
+        }
+    }
+}
