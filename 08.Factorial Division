@@ -1,0 +1,32 @@
+using System;
+
+namespace _08.Factorial_Division
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            double firstNumber = double.Parse(Console.ReadLine());
+            double secundsNumber = double.Parse(Console.ReadLine());
+
+            double first = GoodJob(firstNumber);
+            double secunds = GoodJob(secundsNumber);
+
+            double result = (double)first / secunds;
+
+            Console.WriteLine($"{result:f2}");
+        }
+
+        private static double GoodJob(double number)
+        {
+            double facturiel = 1;
+
+            for (int i = 2; i <= number; i++)
+            {
+                facturiel *= i;
+            }
+
+            return facturiel;
+        }
+    }
+}
